@@ -14,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BootstrapLayout/BootstrapLayout.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="335">
@@ -23,6 +23,15 @@
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#905#911#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DesignGalleryUseBootstrap.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="139" column="31" selection-start-line="139" selection-start-column="31" selection-end-line="139" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -41,8 +50,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -58,6 +67,7 @@
         <option value="$PROJECT_DIR$/BootstrapLayout.html" />
         <option value="$PROJECT_DIR$/BootstrapLayout/poly.css" />
         <option value="$PROJECT_DIR$/BootstrapLayout/BootstrapLayout.html" />
+        <option value="$PROJECT_DIR$/DesignGalleryUseBootstrap.html" />
       </list>
     </option>
   </component>
@@ -129,12 +139,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560608291742</updated>
       <workItem from="1560608294672" duration="725000" />
-      <workItem from="1560648433149" duration="4911000" />
+      <workItem from="1560648433149" duration="7040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5636000" />
+    <option name="totallyTimeSpent" value="7765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -217,6 +227,13 @@
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#905#911#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DesignGalleryUseBootstrap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="139" column="31" selection-start-line="139" selection-start-column="31" selection-end-line="139" selection-end-column="31" />
         </state>
       </provider>
     </entry>
