@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryFunction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("p").hide();
+            });
+            $("#show").click(function () {
+                $("p").show();
+            });
+        });
+
+        $(document).ready(function () {
+            $("ul").find("span").css({"color": "red", "border": "2px solid red"});
+        });
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").toggle();
+            });
+        });
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").animate({left: '250px'});
+            });
+        });
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+            });
+        });
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#div11").fadeOut();
+                $("#div21").fadeOut("slow");
+                $("#div31").fadeOut(3000);
+            });
+        });
+
+        $(document).ready(function(){
+            $(".btn1").click(function(){
+                $("p").slideUp();
+            });
+            $(".btn2").click(function(){
+                $("p").slideDown();
+            });
+        });
+
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideDown("slow");
+            });
+        });
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").html("Hello <b>world!</b>");
+            });
+        });
+
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("p").append(" <b>Appended text</b>.");
+            });
+            $("#btn2").click(function(){
+                $("ol").append("<li>Appended item</li>");
+            });
+        });
+
+        $(document).ready(function(){
+            $("#btn11").click(function(){
+                $("p").prepend("<b>Prepended text</b>. ");
+            });
+            $("#btn21").click(function(){
+                $("ol").prepend("<li>Prepended item</li>");
+            });
+        });
+
+        $(document).ready(function(){
+            $("p").on("click", function(){
+                alert("The paragraph was clicked.");
+            });
+        });
+
+        $(document).ready(function(){
+            $("p").on("click", function(){
+                $(this).css("background-color", "pink");
+            });
+            $("button").click(function(){
+                $("p").off("click");
+            });
+        });
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                alert("Background color = " + $("p").css("background-color"));
+            });
+        });
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("img").attr("width", "500");
+            });
+        });
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("input:text").val("Glenn Quagmire");
+            });
+        });
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").text("Hello world!");
+            });
+        });
+
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("li").each(function(){
+                    alert($(this).text())
+                });
+            });
+        });
+    </script>
+    <style>
+        #panel, #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2>Hide & Show</h2>
+    <p>If you click on the "Hide" button, I will disappear.</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+</div>
+<div>
+    <h2>Find</h2>
+    <div style="width:500px;">div (grandparent)
+        <ul>ul (direct parent)
+            <li>li (child)
+                <span>span (grandchild)</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<div>
+    <h2>Tonggle</h2>
+    <p>This is a paragraph.</p>
+    <button>Toggle between hide() and show()</button>
+</div>
+<div>
+    <h2>Animation</h2>
+    <button>Start Animation</button>
+
+    <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position,
+        remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+    <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</div>
+<div>
+    <h2>Fade in</h2>
+    <p>Demonstrate fadeIn() with different parameters.</p>
+
+    <button>Click to fade in boxes</button>
+    <br><br>
+
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div>
+    <br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div>
+    <br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+</div>
+<div>
+    <h2>FadeOut</h2>
+    <p>Demonstrate fadeOut() with different parameters.</p>
+
+    <button>Click to fade out boxes</button><br><br>
+
+    <div id="div11" style="width:80px;height:80px;background-color:red;"></div><br>
+    <div id="div21" style="width:80px;height:80px;background-color:green;"></div><br>
+    <div id="div31" style="width:80px;height:80px;background-color:blue;"></div>
+</div>
+<div>
+    <h2>Slide Up</h2>
+    <p>This is a paragraph.</p>
+
+    <button class="btn1">Slide up</button>
+    <button class="btn2">Slide down</button>
+</div>
+<div>
+    <h2>Slide down</h2>
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div>
+</div>
+<div>
+    <h2>HTML</h2>
+    <button>Change content of all p elements</button>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+</div>
+<div>
+    <h2>Append</h2>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+
+    <button id="btn1">Append text</button>
+    <button id="btn2">Append list item</button>
+</div>
+<div>
+    <h2>Prepend</h2>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+
+    <button id="btn11">Prepend text</button>
+    <button id="btn21">Prepend list item</button>
+</div>
+<div>
+    <h2>On</h2>
+    <p>Click this paragraph.</p>
+</div>
+<div>
+    <h2>Off</h2>
+
+    <p>Click this paragraph to change its background color.</p>
+    <p>Click the button below and then click on this paragraph (the click event is removed).</p>
+
+    <button>Remove the click event handler</button>
+</div>
+<div>
+    <h2>Css</h2>
+    <h2>This is a heading</h2>
+
+    <p style="background-color:#ff0000">This is a paragraph.</p>
+    <p style="background-color:#00ff00">This is a paragraph.</p>
+    <p style="background-color:#0000ff">This is a paragraph.</p>
+
+    <button>Return background-color of p</button>
+</div>
+<div>
+    <h2>Attr</h2>
+    <img src="img_pulpitrock.jpg" alt="Pulpit Rock" width="284" height="213"><br>
+
+    <button>Set the width attribute of the image</button>
+</div>
+<div>
+    <h2>Val</h2>
+    <p>Name: <input type="text" name="user"></p>
+
+    <button>Set the value of the input field</button>
+</div>
+<div>
+    <h2>Text</h2>
+    <button>Set text content for all p elements</button>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+</div>
+<div>
+    <h2>Each</h2>
+    <button>Alert the value of each list item</button>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Soda</li>
+    </ul>
+</div>
+<div>
+    <h2></h2>
+
+</div>
+</body>
+</html>
